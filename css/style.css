@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(184, 195, 236);
+  display: flex;
+  min-height: 100vh;
+  margin-left: 25px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  border-bottom: 1px solid #ddd;
+
+  & img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+
+  & h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+}
+
+.main {
+  display: flex;
+  height: calc(100vh - 100px);
+}
+
+.sidebar {
+  width: 220px; 
+  background: #fcfaff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  position: sticky;        
+  top: 0;                  
+  height: 700px;           
+  overflow-y: auto;        
+  margin-top: 10px;
+  border-radius: 8px;
+
+  & .active {
+    background-color: rgb(4, 53, 122);
+    border-radius: 5px;
+  }
+}
+
+.content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  max-width: 1200px;
+}
+
+.component-section {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  height: 0;
+  overflow: hidden;
+}
+
+.component-section.show {
+  opacity: 1;
+  height: auto;
+  overflow: visible;
+  margin-bottom: 2rem;
+}
+
+.nav-link {
+  color: #adadad;
+}
+
+.accordion-component-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.badge-component-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  & .buttons {
+    & .btn {
+      margin-right: 30px;
+    }
+  }
+}
+
+.buttons-component-section, .button_group-component-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  & .button {
+    & .btn {
+      margin-right: 10px;
+    }
+  }
+
+  & .style-1 {
+    margin-bottom: 10px;
+  }
+}
+
+.slide {
+  margin-bottom: 80px;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 100%; 
+
+  & .carousel-item {
+    padding: 0 30%;
+    
+    & img {
+      width: 500px;
+      height: 500px;
+    }
+  }
+}
